@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Task31() {
 
+    const [arr, setArr] = useState([]);
+    async function getData() {
+        const data = await fetch('https://api.ipify.org/?format=json', { method: 'GET' });
+        const body = await data.json();
+        setArr(body);
+    }
+    useEffect(() => getData(), []);
 
     return (
         <>
@@ -11,6 +18,7 @@ function Task31() {
                 https://api.ipify.org/?format=json и отображает полученные данные в заголовок.
             </p>
 
+            <h1>{Object.entries(arr)}</h1>
 
             <p><Link to='/'>Перейти на главную страницу</Link></p>
         </>);
