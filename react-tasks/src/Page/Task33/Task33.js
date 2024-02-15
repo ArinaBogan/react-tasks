@@ -1,26 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function Task33() {
-    // const [flag, setFlag] = useState(true);
-    // const [str, setStr] = useState('');
+    const [flag, setFlag] = useState(false);
 
-    // function changeButton() {
-    //     if (flag) {
-    //         setStr('hi')
-    //         setFlag(false)
-    //     }else{
-    //         setStr('')
-    //         setFlag(true)
-    //     }
-    // }
-
-    const [data, setData] = useState('');
-    function changeButton() {
-        if (data == true) {
-            setData(false)
+    const changeButton = () => {
+        if (!flag) {
+            setFlag(true)
         } else {
-            setData(true)
+            setFlag(false)
         }
     }
 
@@ -31,7 +19,7 @@ function Task33() {
                 в h1 "привет", при повторном клике на кнопку убирать "привет" из h1
             </p>
 
-            <h1>{data ? 'hi' : ''}</h1>
+            <h1>{flag ? 'hi' : null}</h1>
             <button onClick={changeButton}>Поздороваться</button>
 
             <p><Link to='/'>Перейти на главную страницу</Link></p>

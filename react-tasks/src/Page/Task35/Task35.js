@@ -11,7 +11,6 @@ function Task35() {
             setFlag(true)
         }
     }
-
     return (
         <>
             <h1>Задача 35</h1>
