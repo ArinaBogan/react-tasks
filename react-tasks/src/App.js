@@ -37,6 +37,13 @@ import Task39 from './Page/Task39/Task39';
 import Task40 from './Page/Task40/Task40';
 import Task41 from './Page/Task41/Task41';
 import Task42 from './Page/Task42/Task42';
+import Task43 from './Page/Task43/Task43';
+import Task44 from './Page/Task44/Task44';
+import Task45 from './Page/Task45/Task45';
+import Task46 from './Page/Task46/Task46';
+import Task47 from './Page/Task47/Task47';
+import Task48 from './Page/Task48/Task48';
+import Task49 from './Page/Task49/Task49';
 
 function App() {
   return (
@@ -80,6 +87,13 @@ function App() {
         <Route path='/task40' element={<Task40></Task40>}></Route>
         <Route path='/task41' element={<Task41></Task41>}></Route>
         <Route path='/task42' element={<Task42></Task42>}></Route>
+        <Route path='/task43' element={<Task43></Task43>}></Route>
+        <Route path='/task44' element={<Task44></Task44>}></Route>
+        <Route path='/task45' element={<Task45></Task45>}></Route>
+        <Route path='/task46' element={<Task46></Task46>}></Route>
+        <Route path='/task47' element={<Task47></Task47>}></Route>
+        <Route path='/task48' element={<Task48></Task48>}></Route>
+        <Route path='/task49' element={<Task49></Task49>}></Route>
 
       </Routes>
     </>
