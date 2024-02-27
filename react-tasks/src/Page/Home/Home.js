@@ -56,6 +56,9 @@ function Home() {
         <p><Link to='/task56'>Задача 56</Link> </p>
         <p><Link to='/task57'>Задача 57</Link> </p>
         <p><Link to='/task58'>Задача 58</Link> </p>
+        <p><Link to='/task59'>Задача 59</Link> </p>
+        <p><Link to='/task60'>Задача 60</Link> </p>
+        <p><Link to='/task61'>Задача 61</Link> </p>
 
     </>);
 }
