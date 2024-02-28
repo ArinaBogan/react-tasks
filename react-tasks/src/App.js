@@ -56,6 +56,7 @@ import Task58 from './Page/Task58/Task58';
 import Task59 from './Page/Task59/Task59';
 import Task60 from './Page/Task60/Task60';
 import Task61 from './Page/Task61/Task61';
+import Task62 from './Page/Task62/Task62';
 
 function App() {
   return (
@@ -118,6 +119,7 @@ function App() {
         <Route path='/task59' element={<Task59></Task59>}></Route>
         <Route path='/task60' element={<Task60></Task60>}></Route>
         <Route path='/task61' element={<Task61></Task61>}></Route>
+        <Route path='/task62' element={<Task62></Task62>}></Route>
 
       </Routes>
     </>
