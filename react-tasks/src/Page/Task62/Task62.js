@@ -7,11 +7,11 @@ function Task62() {
 
     async function getInfo() {
         const num = Math.floor(Math.random() * 10)
-        const data = await axios.get(`http://numbersapi.com/:${num}`);
+        const data = await axios.get(`http://numbersapi.com/${num}`);
         setVal(data.data)
     }
     useEffect(() => {
-        console.log(getInfo(val))
+        console.log(getInfo())
     })
 
     return (
