@@ -3,16 +3,15 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function Task62() {
-    const [val, setVal] = useState(null);
+    const [val, setVal] = useState('');
 
     async function getInfo() {
-        const num = Math.floor(Math.random() * 10)
-        const data = await axios.get(`http://numbersapi.com/${num}`);
-        setVal(data.data)
+        const response = await axios.get(`http://numbersapi.com/${Math.floor(Math.random() * 100)}`);
+        setVal(response.data)
     }
     useEffect(() => {
         console.log(getInfo())
-    })
+    }, [])
 
     return (
         <>
