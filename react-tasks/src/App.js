@@ -76,8 +76,9 @@ import Task77 from './Page/Task77/Task77';
 import Task78 from './Page/Task78/Task78';
 import Task79 from './Page/Task79/Task79';
 import Task80 from './Page/Task80/Task80';
-import { task79Context, task80Context, task81Context } from './Context/Context';
+import { task79Context, task80Context, task81Context, task82Context } from './Context/Context';
 import Task81 from './Page/Task81/Task81';
+import Task82 from './Page/Task82/Task82';
 
 function App() {
   const obj = {
@@ -94,6 +95,10 @@ function App() {
     windSpeed: '50m/s'
   }
 
+  const [flag, setFlag] = useState(false);
+  const [background, setBackground] = useState('white');
+  const [color, setColor] = useState('black');
+  
   return (
     <>
       <task79Context.Provider value={obj}>
@@ -187,6 +192,12 @@ function App() {
           <Route path='/task81' element={<Task81></Task81>}></Route>
         </Routes>
       </task81Context.Provider>
+
+      <task82Context.Provider value={{ flag, setFlag, background, setBackground, color, setColor }}>
+        <Routes>
+          <Route path='/task82' element={<Task82></Task82>}></Route>
+        </Routes>
+      </task82Context.Provider>
     </>
   );
 }
