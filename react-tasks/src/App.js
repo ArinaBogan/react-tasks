@@ -79,6 +79,11 @@ import Task80 from './Page/Task80/Task80';
 import { task79Context, task80Context, task81Context, task82Context } from './Context/Context';
 import Task81 from './Page/Task81/Task81';
 import Task82 from './Page/Task82/Task82';
+import Task83 from './Page/Task83/Task83';
+import Task84 from './Page/Task84/Task84';
+import Task85 from './Page/Task85/Task85';
+import Task86 from './Page/Task86/Task86';
+import Task87 from './Page/Task87/Task87';
 
 function App() {
   const obj = {
@@ -98,7 +103,7 @@ function App() {
   const [flag, setFlag] = useState(false);
   const [background, setBackground] = useState('white');
   const [color, setColor] = useState('black');
-  
+
   return (
     <>
       <task79Context.Provider value={obj}>
@@ -178,6 +183,11 @@ function App() {
           <Route path='/task77' element={<Task77></Task77>}></Route>
           <Route path='/task78' element={<Task78></Task78>}></Route>
           <Route path='/task79' element={<Task79></Task79>}></Route>
+          <Route path='/task83' element={<Task83></Task83>}></Route>
+          <Route path='/task84' element={<Task84></Task84>}></Route>
+          <Route path='/task85' element={<Task85></Task85>}></Route>
+          <Route path='/task86' element={<Task86></Task86>}></Route>
+          <Route path='/task87' element={<Task87></Task87>}></Route>
         </Routes>
       </task79Context.Provider>
 
@@ -198,6 +208,8 @@ function App() {
           <Route path='/task82' element={<Task82></Task82>}></Route>
         </Routes>
       </task82Context.Provider>
+
+
     </>
   );
 }
