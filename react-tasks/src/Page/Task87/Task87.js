@@ -1,14 +1,18 @@
-import { useReducer, useState } from 'react';
+import { useReducer} from 'react';
 import { Link } from 'react-router-dom';
 
-function reducer(state, obj) {
-    switch (obj.action) {
-        case 'changeColor':
-            return obj.text
+function reducer(state, action) {
+    switch (action.type) {
+        case 'val':
+            return action.value;
+        default:
+            break;
     }
 }
 
 function Task87() {
+    const [inpVal1, dispatch1] = useReducer(reducer, '')
+    const [inpVal2, dispatch2] = useReducer(reducer, '')
 
     return (
         <>
@@ -18,9 +22,9 @@ function Task87() {
             </p>
             <p><Link to='/'>Перейти на главную страницу</Link></p>
 
-            <input type="text" />
-            <input type="text" />
-            <button>click</button>
+            <input onChange={(e) => dispatch1({ type: 'val', value: e.target.value })} type="text" />
+            <input onChange={(e) => dispatch2({ type: 'val', value: e.target.value })} type="text" />
+            <button onClick={() => console.log(Number(inpVal1) + Number(inpVal2))}>Click me</button >
         </>
     );
 }
